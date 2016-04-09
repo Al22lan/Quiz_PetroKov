@@ -14,7 +14,8 @@
 		3FE0D9D91CB8E8E600D72A60 /* MyFirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0D9D81CB8E8E600D72A60 /* MyFirstTableViewController.swift */; };
 		3FE0D9DC1CB8FB6500D72A60 /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FE0D9DA1CB8FB6500D72A60 /* animals.json */; };
 		3FE0D9DD1CB8FB6500D72A60 /* cinema.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FE0D9DB1CB8FB6500D72A60 /* cinema.json */; };
-		3FE0D9E01CB8FDD700D72A60 /* QuiestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0D9DF1CB8FDD700D72A60 /* QuiestionViewController.swift */; };
+		3FE0D9E01CB8FDD700D72A60 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0D9DF1CB8FDD700D72A60 /* QuestionViewController.swift */; };
+		3FE0D9E31CB9052200D72A60 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0D9E21CB9052200D72A60 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		3FE0D9D81CB8E8E600D72A60 /* MyFirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFirstTableViewController.swift; sourceTree = "<group>"; };
 		3FE0D9DA1CB8FB6500D72A60 /* animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
 		3FE0D9DB1CB8FB6500D72A60 /* cinema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cinema.json; sourceTree = "<group>"; };
-		3FE0D9DF1CB8FDD700D72A60 /* QuiestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiestionViewController.swift; sourceTree = "<group>"; };
+		3FE0D9DF1CB8FDD700D72A60 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		3FE0D9E21CB9052200D72A60 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3FE0D9E11CB8FDF600D72A60 /* ViewControllers */,
 				3FE0D9DE1CB8FB7700D72A60 /* Data JSon */,
 				3FE0D9C61CB8E24900D72A60 /* AppDelegate.swift */,
+				3FE0D9E21CB9052200D72A60 /* Question.swift */,
 				3FE0D9CA1CB8E24900D72A60 /* Main.storyboard */,
 				3FE0D9CD1CB8E24900D72A60 /* Assets.xcassets */,
 				3FE0D9CF1CB8E24900D72A60 /* LaunchScreen.storyboard */,
@@ -84,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE0D9D81CB8E8E600D72A60 /* MyFirstTableViewController.swift */,
-				3FE0D9DF1CB8FDD700D72A60 /* QuiestionViewController.swift */,
+				3FE0D9DF1CB8FDD700D72A60 /* QuestionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -162,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE0D9E01CB8FDD700D72A60 /* QuiestionViewController.swift in Sources */,
+				3FE0D9E01CB8FDD700D72A60 /* QuestionViewController.swift in Sources */,
 				3FE0D9D91CB8E8E600D72A60 /* MyFirstTableViewController.swift in Sources */,
 				3FE0D9C71CB8E24900D72A60 /* AppDelegate.swift in Sources */,
+				3FE0D9E31CB9052200D72A60 /* Question.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

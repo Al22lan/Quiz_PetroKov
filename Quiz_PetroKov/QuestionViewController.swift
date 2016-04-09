@@ -25,7 +25,19 @@ class QuiestionViewController: UIViewController {
         print (data)
         //! означает что я гарантирую что там имеено данные JSON
         let json = try! NSJSONSerialization.JSONObjectWithData(data, options: [])
-        print ("Содержимое викторины \(json)")
+        //print ("Содержимое викторины \(json)")
         
+        //Пробуем представить json  как коллекцию вида Строка - любой объект
+        guard let questionJSON = json as? [String:AnyObject],
+            //если повевезет, то считаем из questionJSON сщдержимое
+            let questionsToParse = questionJSON["questions"] as? [[String:AnyObject]] else {
+                print ("Faild to load DataModel")
+                return
+                   }
+        let questionModels = questionsToParse.map{json->Question in
+            let parsedModel = Question(json:json)
+            return parsedModel
+                }
+        print ("Ваще ничего не понятно! \n\(questionModels)")
     }
 }
