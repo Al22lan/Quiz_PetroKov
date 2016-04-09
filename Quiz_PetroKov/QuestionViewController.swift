@@ -25,8 +25,15 @@ class QuiestionViewController: UIViewController {
         }
     }
     
+    var answers:[String]?{
+    return currentQuestion?.answers
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        
         loadData()
         // Do any additional setup after loading the view.
     }
@@ -59,12 +66,29 @@ class QuiestionViewController: UIViewController {
     
     func updateViews(){
     let image = currentQuestion?.image
+        //Картинка
         ImageView.image = image
+        //Вопрос
         Label.text = currentQuestion?.question
-        
+        //Перезаполнение таблевью
+        tableView.reloadData()
         
     }
     
+}
+
+extension QuiestionViewController:UITableViewDataSource{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return answers?.count ?? 0
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
+        cell.textLabel?.text = answers?[indexPath.row]
+        //нижний текст
+        let isCorrect = currentQuestion?.isCorrectAnswer(answers?[indexPath.row]) ?? false
+        cell.detailTextLabel?.text = isCorrect ? "Это гуд" : "Не гуд"
+        return cell
+    }
 }
 
 
