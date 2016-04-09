@@ -12,6 +12,9 @@
 		3FE0D9CE1CB8E24900D72A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE0D9CD1CB8E24900D72A60 /* Assets.xcassets */; };
 		3FE0D9D11CB8E24900D72A60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE0D9CF1CB8E24900D72A60 /* LaunchScreen.storyboard */; };
 		3FE0D9D91CB8E8E600D72A60 /* MyFirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0D9D81CB8E8E600D72A60 /* MyFirstTableViewController.swift */; };
+		3FE0D9DC1CB8FB6500D72A60 /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FE0D9DA1CB8FB6500D72A60 /* animals.json */; };
+		3FE0D9DD1CB8FB6500D72A60 /* cinema.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FE0D9DB1CB8FB6500D72A60 /* cinema.json */; };
+		3FE0D9E01CB8FDD700D72A60 /* QuiestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0D9DF1CB8FDD700D72A60 /* QuiestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3FE0D9D01CB8E24900D72A60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FE0D9D21CB8E24900D72A60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FE0D9D81CB8E8E600D72A60 /* MyFirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFirstTableViewController.swift; sourceTree = "<group>"; };
+		3FE0D9DA1CB8FB6500D72A60 /* animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
+		3FE0D9DB1CB8FB6500D72A60 /* cinema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cinema.json; sourceTree = "<group>"; };
+		3FE0D9DF1CB8FDD700D72A60 /* QuiestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		3FE0D9C51CB8E24900D72A60 /* Quiz_PetroKov */ = {
 			isa = PBXGroup;
 			children = (
+				3FE0D9E11CB8FDF600D72A60 /* ViewControllers */,
+				3FE0D9DE1CB8FB7700D72A60 /* Data JSon */,
 				3FE0D9C61CB8E24900D72A60 /* AppDelegate.swift */,
 				3FE0D9CA1CB8E24900D72A60 /* Main.storyboard */,
-				3FE0D9D81CB8E8E600D72A60 /* MyFirstTableViewController.swift */,
 				3FE0D9CD1CB8E24900D72A60 /* Assets.xcassets */,
 				3FE0D9CF1CB8E24900D72A60 /* LaunchScreen.storyboard */,
 				3FE0D9D21CB8E24900D72A60 /* Info.plist */,
 			);
 			path = Quiz_PetroKov;
+			sourceTree = "<group>";
+		};
+		3FE0D9DE1CB8FB7700D72A60 /* Data JSon */ = {
+			isa = PBXGroup;
+			children = (
+				3FE0D9DA1CB8FB6500D72A60 /* animals.json */,
+				3FE0D9DB1CB8FB6500D72A60 /* cinema.json */,
+			);
+			name = "Data JSon";
+			sourceTree = "<group>";
+		};
+		3FE0D9E11CB8FDF600D72A60 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FE0D9D81CB8E8E600D72A60 /* MyFirstTableViewController.swift */,
+				3FE0D9DF1CB8FDD700D72A60 /* QuiestionViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE0D9D11CB8E24900D72A60 /* LaunchScreen.storyboard in Resources */,
+				3FE0D9DD1CB8FB6500D72A60 /* cinema.json in Resources */,
+				3FE0D9DC1CB8FB6500D72A60 /* animals.json in Resources */,
 				3FE0D9CE1CB8E24900D72A60 /* Assets.xcassets in Resources */,
 				3FE0D9CC1CB8E24900D72A60 /* Main.storyboard in Resources */,
 			);
@@ -135,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE0D9E01CB8FDD700D72A60 /* QuiestionViewController.swift in Sources */,
 				3FE0D9D91CB8E8E600D72A60 /* MyFirstTableViewController.swift in Sources */,
 				3FE0D9C71CB8E24900D72A60 /* AppDelegate.swift in Sources */,
 			);
