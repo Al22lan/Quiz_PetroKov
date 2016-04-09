@@ -43,6 +43,13 @@ class QuiestionViewController: UIViewController {
         loadData()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        currentQuestionIndex = 0
+        totalPoints = 0
+        currentQuestion = questionList?.first
+    }
 
     func loadData(){
         let fileName = "cinema"
@@ -80,6 +87,14 @@ class QuiestionViewController: UIViewController {
         tableView.reloadData()
         
     }
+    //перед переходом по сегвею (на новый экран)
+    //переопределение метода - всегда когда прыгаем по сегвею - можно проверить куда и зачем
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let newVC = segue.destinationViewController as? ResultViewController{
+        newVC.result = sender as! Int
+        }
+        
+    }
     
 }
 
@@ -110,7 +125,13 @@ extension QuiestionViewController : UITableViewDelegate{
         currentQuestionIndex += 1
         guard currentQuestionIndex < questionList?.count else {
         print ("Конец викторине")
-        return
+        //currentQuestionIndex = 0
+            //currentQuestion = questionList?[currentQuestionIndex]
+            let rating = Double( totalPoints) / Double((questionList?.count)!)
+            let convRating = Int(rating*100)
+            
+            performSegueWithIdentifier("ShowResult", sender: convRating)
+            return
         }
         currentQuestion = questionList?[currentQuestionIndex]
 
