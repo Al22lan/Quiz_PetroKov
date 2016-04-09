@@ -9,7 +9,22 @@
 import UIKit
 
 class QuiestionViewController: UIViewController {
-
+    
+    @IBOutlet weak var ImageView: UIImageView!
+    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var questionList: [Question]? {
+        didSet {
+        currentQuestion = questionList?.first
+        }
+    }
+    var currentQuestion:Question?{
+        didSet{
+        updateViews()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -39,5 +54,34 @@ class QuiestionViewController: UIViewController {
             return parsedModel
                 }
         print ("Ваще ничего не понятно! \n\(questionModels)")
+        questionList = questionModels
     }
+    
+    func updateViews(){
+    let image = currentQuestion?.image
+        ImageView.image = image
+        Label.text = currentQuestion?.question
+        
+        
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

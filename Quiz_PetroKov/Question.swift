@@ -15,6 +15,10 @@ struct Question {
     let answers: [String]
     let correctAnswer: String
     let imageName: String
+    var image:UIImage?{
+        return UIImage(named: imageName)
+    }
+    
     init(json:[String:AnyObject]){
     question = json["question"] as! String
     answers = json["answers"] as! [String]
