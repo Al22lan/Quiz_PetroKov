@@ -32,8 +32,30 @@ class QuiestionViewController: UIViewController {
     var totalPoints = 0
     var currentQuestionIndex = 0
     
+    //MARK: - View Controller Life Cycle -
+    
+    //1.
+    //Инициализация вызывается при инициализации из Storyboard
+    //required init?(){
+    //super.init()
+    //}
+    //
+    
+    //2.Загрузка View
+    //Если хотим создавать все View из кода
+    //то в нем вы их создадите
+    // func loadView() {}
+    
+    
+    //3. Вызывается в момент кога все Вью нашего контроллера уже загружены
+    // В этот момент вью контроллер еще не присутсвует на экране
+    // Это отличное место для инициализации данных запуска каких-то длительных проуессов
+    // В этот момент наши Вью еще не приняли конечных размеров и положений
+    // Этот метод вызывается один раз за время работы нашего контроллера
     override func viewDidLoad() {
         super.viewDidLoad()
+         print ("viewDidLoad - Run")
+        
         tableView.dataSource = self
         
         // отвечает за то что делать при возникновении различных событий
@@ -46,11 +68,17 @@ class QuiestionViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        print ("viewWillAppear - Run")
         currentQuestionIndex = 0
         totalPoints = 0
         currentQuestion = questionList?.first
     }
 
+    
+    
+    //MARK: - Setup
+    
+    
     func loadData(){
         let fileName = "cinema"
         let fileExt = "json"
@@ -87,6 +115,9 @@ class QuiestionViewController: UIViewController {
         tableView.reloadData()
         
     }
+    
+    //MARK: -
+    
     //перед переходом по сегвею (на новый экран)
     //переопределение метода - всегда когда прыгаем по сегвею - можно проверить куда и зачем
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
